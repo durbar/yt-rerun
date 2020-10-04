@@ -1,0 +1,30 @@
+:root {
+
+    --color-green: #55bb55;
+    --color-green-lite: #81C784;
+
+    --color-red: #ee7777;
+    --color-red-lite: #EF9A9A;
+
+    --color-pale: #E3E9DF;
+
+    --gap: 5px;
+}
+* {
+    background: var(--color-pale);
+}
+
+button {
+    background: var(--color-red);
+}
+button:hover {
+    background: var(--color-red-lite);
+}
+
+button.active {
+    background: var(--color-green);
+}
+button.active:hover {
+    background: var(--color-green-lite);
+}
+
