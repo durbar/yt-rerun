@@ -10,6 +10,11 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "activeTab"
-  ]
+    "activeTab",
+    "tabs",
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "scripts":["background.js"]
+  }
 }

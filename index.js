@@ -4,13 +4,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	checkPageButton.addEventListener('click', function () {
 
-		const value = checkPageButton.classList.contains("active") ? 0 : 1;
+		const isActive = checkPageButton.classList.contains("active") ? 0 : 1;
+
+
 		chrome.tabs.executeScript({
-				code: `(${main})(${JSON.stringify({result: value})})`
+				code: `(${main})(${JSON.stringify({result: isActive})})`
 			}, ([result] = []) => {
 				console.log("result came ", result)
 			});
-		if (value) {
+		if (isActive) {
 			checkPageButton.classList.add("active");
 		}
 		else {
@@ -64,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		return {
 			result: 1
 		}
-
 	}
 });
 
